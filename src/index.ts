@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express, {
   Request,
   Response,
@@ -5,6 +6,7 @@ import express, {
   NextFunction,
 } from 'express';
 import cors from 'cors';
+import dbo from './db/conn';
 
 const PORT: Number = Number(process.env.PORT) || 5000;
 const app: express.Express = express();
@@ -28,6 +30,13 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello world');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port: ${PORT}`);
+dbo.connectToServer(err => {
+  if (err) {
+    console.error(err);
+    process.exit();
+  }
+
+  app.listen(PORT, () => {
+    console.log(`Server is running on port: ${PORT}`);
+  });
 });

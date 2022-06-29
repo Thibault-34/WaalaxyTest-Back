@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:17.0.3"],\
             ["@types/cors", "npm:2.8.12"],\
             ["@types/express", "npm:4.17.13"],\
+            ["@types/node", "npm:18.0.0"],\
             ["cors", "npm:2.8.5"],\
             ["dotenv", "npm:16.0.1"],\
             ["express", "npm:4.18.1"],\
@@ -648,6 +649,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:17.0.3"],\
             ["@types/cors", "npm:2.8.12"],\
             ["@types/express", "npm:4.17.13"],\
+            ["@types/node", "npm:18.0.0"],\
             ["cors", "npm:2.8.5"],\
             ["dotenv", "npm:16.0.1"],\
             ["express", "npm:4.18.1"],\
