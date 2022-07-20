@@ -17,7 +17,7 @@ export class UserActionsUpdatScheduler {
         console.info(`userCreditUpdateScheduler: reset ${userId}`);
       });
     };
-    const jobScheduler = new JobScheduler(job, 2 * 1000);
+    const jobScheduler = new JobScheduler(job, 2 * 60 * 1000);
 
     new UserController().getAll().then((users: IUser[] | null) => {
       users?.forEach(async user => {
